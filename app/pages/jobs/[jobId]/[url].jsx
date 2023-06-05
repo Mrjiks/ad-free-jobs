@@ -16,8 +16,8 @@ const SingleJob = () => {
     setLocation(() => e.target.value);
   };
   return (
-    <div className='relative w-1/3 mr-3 '>
-      <form className='flex flex-col justify-between fixed gap-3 mt-0 md:flex-row'>
+    <div className='hidden mr-3 md:relative md:w-1/3 '>
+      <form className='flex flex-col justify-between gap-3 mt-0 md:fixed md:flex-row'>
         <Input
           placeholder='Job Title, Company name, or role'
           type='text'
