@@ -21,7 +21,7 @@ export default function Home() {
             <div className='flex flex-col w-full gap-3 md:flex-row'>
               <Button
                 type='submit'
-                className='w-auto p-2 text-black bg-blue-300 rounded-sm '
+                className='w-auto p-2 text-black bg-white rounded-sm '
                 text='Search'
               />
             </div>
