@@ -17,17 +17,18 @@ export default function Home() {
   };
   return (
     <main className='flex flex-col justify-between min-h-screen gap-2 '>
-      <section className='flex flex-col justify-center flex-1 p-2 place-content-center bg-black-500'>
+      <section className='flex flex-col justify-center flex-1 p-2 '>
         <div className='flex justify-center mb-7 '>
           <h1 className='text-2xl font-bold capitalize md:text-5xl lg:text-5xl'>
-            The Easiest Way to Get Your New Job
+            The Easiest Way to Get <br className='md:hidden' />
+            Your New Job
           </h1>
         </div>
         <p className='mb-10 text-center capitalize md:text-3xl lg:text-3xl'>
           Latest Ad-free job board
         </p>
         <div className='flex justify-center'>
-          <form className='flex flex-col justify-between gap-3 md:flex-row'>
+          <form className='flex flex-col justify-between w-full gap-3 px-4 md:w-1/2 md:flex-row'>
             <Input
               placeholder='Job Title, Company name, or role'
               type='text'
@@ -40,7 +41,7 @@ export default function Home() {
             <Input
               placeholder='City, Province, or region'
               type='text'
-              className='p-2 text-black rounded-sm'
+              className='w-full p-2 text-black rounded-sm'
               name='search-job'
               onChange={handleLocation}
             />
