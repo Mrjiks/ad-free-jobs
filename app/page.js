@@ -2,6 +2,7 @@
 import Input from "./components/atoms/Input";
 import Button from "./components/atoms/Button";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState();
@@ -45,11 +46,13 @@ export default function Home() {
             />
 
             <div className='flex flex-col w-full gap-3 md:flex-row'>
-              <Button
-                type='submit'
-                className='w-auto p-2 text-black bg-white rounded-sm '
-                text='Search'
-              />
+              <Link href='/pages/jobs'>
+                <Button
+                  type='submit'
+                  className='w-auto p-2 text-black bg-white rounded-sm '
+                  text='Search'
+                />
+              </Link>
             </div>
           </form>
         </div>
