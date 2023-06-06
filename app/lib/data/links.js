@@ -1,11 +1,9 @@
 // const url = "https://www.arbeitnow.com/api/job-board-api";
 
 export default async function getData(url) {
-  // "use server";
   const res = await fetch(url);
 
   if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
     throw new Error("Failed to fetch data");
   }
 

@@ -12,6 +12,7 @@ const Jobs = () => {
 
   const getJob = async () => {
     const { data } = await getData(url);
+
     const sortedData = data.sort((a, b) => b.created_at - a.created_at).slice(1, 50);
 
     setJobList(sortedData);
@@ -25,7 +26,7 @@ const Jobs = () => {
   if (jobList.length === 0) {
     return (
       <div className='flex justify-center min-h-screen align-middle '>
-        <div className='h-4 rounded-lg '>
+        <div className='h-4 mt-6 rounded-lg'>
           <h1 className='text-5xl font-extrabold '>Load...</h1>
         </div>
       </div>
@@ -52,24 +53,26 @@ const Jobs = () => {
               key={slug + description}>
               <div className='flex flex-col justify-between w-full h-auto mx-2 mb-8 align-middle bg-white border rounded-lg shadow-lg md:w-full md:flex-row lg:flex-row 2xl:flex-row'>
                 <div className='flex flex-col flex-wrap items-start w-full px-4 overflow-hidden text-black md:mr-3 md:p-4 md:w-1/2'>
-                  <h3 className='mb-3 capitalize'>
+                  <h3 className='capitalize '>
                     Company Name:<span className='font-semibold'> {company_name}</span>
                   </h3>
+                  {/* <p className='uppercase'>
+                    {" "}
+                    Job Information:<span className='capitalize'> {tags[0]}</span>
+                  </p> */}
                   <p className='uppercase'>
                     {" "}
-                    Job Information:<span className='capitalize'> {slug}</span>
+                    Job Title: <span className='font-semibold capitalize'>{title}</span>
                   </p>
-                  <p className='uppercase'>
-                    {" "}
-                    Job Role: <span className='font-semibold'>{title}</span>
-                  </p>
-                  <p className='py-2 uppercase'>
+                  {/* <p className='py-2 uppercase'>
                     {" "}
                     Pay:{" "}
-                    <span className='font-semibold'>${Math.ceil(+created_at / 10000)} / year</span>
-                  </p>
+                    <span className='font-semibold'>
+                      ${Math.ceil(Number(created_at) / 10000)} / year
+                    </span>
+                  </p> */}
                   <p className='uppercase'>
-                    Contact:<span className='font-semibold capitalize'>{tags[0]}</span>
+                    Type:<span className='font-semibold capitalize'>{tags[0]}</span>
                   </p>
                 </div>
                 <div className='flex items-center px-4'>
