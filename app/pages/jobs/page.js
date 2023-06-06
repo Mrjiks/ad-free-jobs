@@ -1,8 +1,9 @@
+"use client";
 import { jobs } from "@/app/lib/data/links";
 import Link from "next/link";
 import React from "react";
 import SingleJob from "./[jobId]/[url]";
-
+import { motion } from "framer-motion";
 const Jobs = () => {
   return (
     <div className='container flex w-full min-h-screen mx-auto mb-2 overflow-hidden md:justify-between md:px-8 lg:px-20'>
@@ -12,7 +13,12 @@ const Jobs = () => {
       <div className='w-full'>
         {jobs.map((job) => {
           return (
-            <div
+            <motion.div
+              initial={{ opacity: 1 }}
+              whileHover={{
+                scale: 1.02,
+                transition: { duration: 0.8 },
+              }}
               className='flex justify-center md:mt-2 md:w-full hover:translate-y-1 '
               key={job.id}>
               <div className='flex flex-col justify-between w-full h-auto mx-2 mb-8 align-middle bg-white border rounded-lg shadow-lg md:w-full md:flex-row lg:flex-row 2xl:flex-row'>
@@ -47,7 +53,7 @@ const Jobs = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>
