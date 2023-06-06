@@ -1,3 +1,40 @@
+// const url = "https://www.arbeitnow.com/api/job-board-api";
+
+export default async function getData(url) {
+  // "use server";
+  const res = await fetch(url);
+
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+// export default async function Page() {
+//   const data = await getData();
+
+//   return <main></main>;
+// }
+
+// var axios = require("axios");
+
+// var config = {
+//   method: "get",
+//   maxBodyLength: Infinity,
+//   url: "https://www.arbeitnow.com/api/job-board-api",
+//   headers: {},
+// };
+
+// axios(config)
+//   .then(function (response) {
+//     console.log(JSON.stringify(response.data));
+//   })
+//   .catch(function (error) {
+//     console.log(error);
+//   });
+
 export const links = [
   {
     id: 1,
