@@ -1,5 +1,5 @@
 "use client";
-import getData, { jobs } from "@/app/lib/data/links";
+import getData from "@/app/lib/data/links";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import SingleJob from "./[jobId]/[url]";
@@ -49,7 +49,7 @@ const Jobs = () => {
                 transition: { duration: 0.8 },
               }}
               className='flex justify-center md:mt-2 md:w-full hover:translate-y-1 '
-              key={job.id}>
+              key={slug + description}>
               <div className='flex flex-col justify-between w-full h-auto mx-2 mb-8 align-middle bg-white border rounded-lg shadow-lg md:w-full md:flex-row lg:flex-row 2xl:flex-row'>
                 <div className='flex flex-col flex-wrap items-start w-full px-4 overflow-hidden text-black md:mr-3 md:p-4 md:w-1/2'>
                   <h3 className='mb-3 capitalize'>
