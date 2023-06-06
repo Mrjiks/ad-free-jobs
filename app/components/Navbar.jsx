@@ -5,6 +5,7 @@ import { links } from "@/app/lib/data/links";
 import PageLink from "./atoms/Link";
 import { FiMenu } from "react-icons/fi";
 import { TfiClose } from "react-icons/tfi";
+import { motion, AnimatePresence } from "framer-motion";
 
 import Link from "next/link";
 import Logo from "./atoms/Logo";
@@ -40,9 +41,17 @@ export const Navbar = () => {
           </div>
         </div>
         {showMenu && (
-          <div className='absolute top-0 left-0 w-full min-h-screen md:hidden lg:hidden'>
-            {showMenu && <Menu showMenu={showMenu} setShowMenu={setShowMenu} />}
-          </div>
+          <AnimatePresence>
+            <motion.div
+              key='modal'
+              initial={{ x: -300, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: 300, opacity: 0 }}
+              transition={{ delay: 0.2, type: "tween", stiffness: 100 }}
+              className='absolute top-0 left-0 w-full min-h-screen md:hidden lg:hidden'>
+              {showMenu && <Menu showMenu={showMenu} setShowMenu={setShowMenu} />}
+            </motion.div>
+          </AnimatePresence>
         )}
       </nav>
     </div>
