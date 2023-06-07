@@ -15,6 +15,8 @@ export default function Home() {
     e.preventDefault();
     setLocation(() => e.target.value);
   };
+
+  const isDisabled = !searchTerm;
   return (
     <main className='flex flex-col justify-between min-h-screen gap-2 '>
       <section className='flex flex-col justify-start flex-1 w-full p-2'>
@@ -30,7 +32,7 @@ export default function Home() {
         <div className='flex justify-center'>
           <form className='flex flex-col justify-between w-full gap-3 px-4 md:w-1/2 md:flex-row'>
             <Input
-              placeholder='Job Title, Company name, or role'
+              placeholder='Activate search button by typing something...'
               type='text'
               className='p-2 text-black rounded-sm '
               autoFocus='autoFocus'
@@ -38,20 +40,25 @@ export default function Home() {
               name='search-job'
               onChange={handleChange}
             />
-            <Input
+            {/* <Input
               placeholder='City, Province, or region'
               type='text'
               className='hidden w-full p-2 text-black rounded-sm md:block lg:block 2xl:block'
               name='search-job'
               onChange={handleLocation}
-            />
+            /> */}
 
             <div className='flex flex-col w-full gap-3 md:flex-row'>
               <Link href='/pages/jobs' className='justify-center'>
                 <Button
                   type='submit'
-                  className='w-auto p-2 text-black bg-white rounded-sm '
+                  className={`${
+                    isDisabled
+                      ? "w-auto p-2 text-black bg-gray-700 rounded-sm  md:block "
+                      : "w-auto p-2 text-black bg-gray-300 rounded-sm"
+                  }`}
                   text='Search'
+                  disabled={isDisabled}
                 />
               </Link>
             </div>
