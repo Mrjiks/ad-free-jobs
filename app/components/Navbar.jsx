@@ -36,7 +36,7 @@ export const Navbar = () => {
             {!showMenu ? (
               <FiMenu className='w-10 h-10 pr-2 font-semibold text-gray-500 cursor-pointer' />
             ) : (
-              <TfiClose className='w-10 h-10 pr-2 font-semibold text-gray-500 cursor-pointer' />
+              <TfiClose className='hidden w-10 h-10 pr-2 font-semibold text-gray-500 cursor-pointer' />
             )}
           </div>
         </div>

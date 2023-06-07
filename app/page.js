@@ -40,13 +40,6 @@ export default function Home() {
               name='search-job'
               onChange={handleChange}
             />
-            {/* <Input
-              placeholder='City, Province, or region'
-              type='text'
-              className='hidden w-full p-2 text-black rounded-sm md:block lg:block 2xl:block'
-              name='search-job'
-              onChange={handleLocation}
-            /> */}
 
             <div className='flex flex-col w-full gap-3 md:flex-row'>
               <Link href='/pages/jobs' className='justify-center'>

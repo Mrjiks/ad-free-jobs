@@ -12,7 +12,7 @@ const Menu = ({ setShowMenu, showMenu }) => {
       </div>
       <div>
         <TfiClose
-          className='w-10 h-10 pl-2 mt-4 font-semibold text-white cursor-pointer'
+          className='w-10 h-10 pl-2 mt-10 font-semibold text-white cursor-pointer'
           onClick={() => setShowMenu(!showMenu)}
         />
       </div>
