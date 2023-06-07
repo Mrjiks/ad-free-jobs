@@ -13,8 +13,8 @@ import Logo from "./atoms/Logo";
 export const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   return (
-    <div className='z-50 sticky inset-0 bg-gray-900'>
-      <nav className='container flex justify-between sticky inset-0 py-10 mb-2 md:justify-between md:px-8 lg:px-20'>
+    <div className='flex z-50 justify-center sticky inset-0 h-20 align-middle bg-gray-900'>
+      <nav className='container flex justify-between py-4 align-middle md:px-3 lg:px-3'>
         <Link href='/'>
           <Logo />
         </Link>

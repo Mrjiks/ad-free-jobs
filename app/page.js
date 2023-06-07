@@ -29,12 +29,12 @@ export default function Home() {
         <p className='mb-10 text-center capitalize md:text-3xl lg:text-3xl'>
           Latest Ad-free job board
         </p>
-        <div className='flex justify-center'>
-          <form className='flex flex-col justify-between w-full gap-3 px-4 md:w-1/2 md:flex-row'>
+        <div className='flex justify-end align-middle'>
+          <form className='flex flex-col justify-center w-full gap-3 px-4 md:w-3/4 md:flex-row'>
             <Input
               placeholder='Activate search button by typing something...'
               type='text'
-              className='p-2 text-black rounded-sm '
+              className='w-full p-2 text-black rounded-sm'
               autoFocus='autoFocus'
               value={searchTerm}
               name='search-job'
@@ -42,13 +42,13 @@ export default function Home() {
             />
 
             <div className='flex flex-col w-full gap-3 md:flex-row'>
-              <Link href='/pages/jobs' className='justify-center'>
+              <Link href='/pages/jobs' className='justify-center w-ull'>
                 <Button
                   type='submit'
                   className={`${
                     isDisabled
-                      ? "w-auto p-2 text-black bg-gray-700 rounded-sm  md:block "
-                      : "w-auto p-2 text-black bg-gray-300 rounded-sm"
+                      ? " p-2 text-black bg-gray-700 rounded-sm  md:block w-full "
+                      : "p-2 text-black bg-gray-300 rounded-sm w-full"
                   }`}
                   text='Search'
                   disabled={isDisabled}
@@ -58,16 +58,38 @@ export default function Home() {
           </form>
         </div>
       </section>
-      <section className='py-10 bg-white flex-2'>
-        <div className='flex flex-col justify-center'>
+      <section className='flex flex-col justify-start flex-1 w-full p-2 bg-white'>
+        <div className='flex flex-col justify-center '>
           <h2 className='font-bold text-center text-black capitalize md:text-5xl lg:text-5xl'>
             Popular Categories
           </h2>
-          <p className='mt-6 text-center text-black capitalize md:text-2xl lg:text-2xl'>
+          <p className='my-6 text-center text-black capitalize md:text-2xl lg:text-2xl'>
             Latest Ad-free job board
           </p>
+          <div className='flex flex-col justify-center w-full gap-2 md:grid-cols-3 md:grid'>
+            <div className='flex-1 bg-red-500 '>
+              <p>Home</p>
+              <p>Home</p>
+              <p>Home</p>
+              <p>Home</p>
+            </div>
+            <div className='flex-1 bg-blue-500'>
+              {" "}
+              <p>Home</p>
+              <p>Home</p>
+              <p>Home</p>
+              <p>Home</p>
+            </div>
+
+            <div className='flex-1 bg-purple-500'>
+              {" "}
+              <p>Home</p>
+              <p>Home</p>
+              <p>Home</p>
+              <p>Home</p>
+            </div>
+          </div>
         </div>
-        <div className='w-full h-24'></div>
       </section>
     </main>
   );
