@@ -41,6 +41,7 @@ const Jobs = () => {
       <div className='w-full'>
         {jobList?.map((job) => {
           const { created_at, company_name, description, location, title, url, tags, slug } = job;
+          const desc = description.replaceAll(/(<([^>]+)>)/gi, "+").split("+");
 
           return (
             <motion.div
@@ -53,36 +54,37 @@ const Jobs = () => {
               key={slug + description}>
               <div className='flex flex-col justify-between w-full h-auto mx-2 mb-8 align-middle bg-white border rounded-lg shadow-lg md:w-full md:flex-row lg:flex-row 2xl:flex-row'>
                 <div className='flex flex-col flex-wrap items-start w-full px-4 overflow-hidden text-black md:mr-3 md:p-4 md:w-1/2'>
-                  <h3 className='capitalize '>
-                    Company Name:<span className='font-semibold'> {company_name}</span>
+                  <h3 className='font-semibold capitalize '>
+                    Company Name:<span className='font-normal capitalize'> {company_name}</span>
                   </h3>
-                  {/* <p className='uppercase'>
+                  <p className='font-semibold capitalize'>
                     {" "}
-                    Job Information:<span className='capitalize'> {tags[0]}</span>
-                  </p> */}
-                  <p className='uppercase'>
-                    {" "}
-                    Job Title: <span className='font-semibold capitalize'>{title}</span>
+                    Job Title: <span className='font-normal capitalize '>{title}</span>
                   </p>
-                  {/* <p className='py-2 uppercase'>
-                    {" "}
-                    Pay:{" "}
-                    <span className='font-semibold'>
-                      ${Math.ceil(Number(created_at) / 10000)} / year
-                    </span>
-                  </p> */}
-                  <p className='uppercase'>
-                    Type:<span className='font-semibold capitalize'>{tags[0]}</span>
+                  <p className='font-semibold capitalize'>
+                    Type:<span className='font-normal capitalize'>{tags[0]}</span>
                   </p>
+                  {/* <div className='hidden'>
+                    <p className='font-semibold capitalize'>Job Description:</p>
+                    {desc.map((tag, index) => {
+                      return (
+                        <p key={index} className='text-justify'>
+                          {tag.replace(" ", "  ").substring(0, 250)}
+                        </p>
+                      );
+                    })}
+                  </div> */}
                 </div>
-                <div className='flex items-center px-4'>
+                <div className='flex items-center px-4 pt-4'>
                   <p className='capitalize'>
                     Location: <span className='text-gray-900'>{location}</span>{" "}
                   </p>
                 </div>
-                <div className='flex items-center px-4 pb-4'>
+                <div className='flex items-center px-4 py-4'>
                   <p className='p-2 bg-black border-blue-500 rounded-lg'>
-                    <Link href={url}>Apply here</Link>
+                    <Link href={url}>
+                      Learn More and <span className='text-green-500'>Apply</span>
+                    </Link>
                   </p>
                 </div>
               </div>

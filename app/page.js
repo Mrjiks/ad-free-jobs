@@ -17,9 +17,9 @@ export default function Home() {
   };
   return (
     <main className='flex flex-col justify-between min-h-screen gap-2 '>
-      <section className='flex flex-col justify-center flex-1 p-2 '>
-        <div className='flex justify-center mb-7 '>
-          <h1 className='text-2xl font-bold capitalize md:text-5xl lg:text-5xl'>
+      <section className='flex flex-col justify-start flex-1 w-full p-2'>
+        <div className='flex justify-center w-full md:mt-20 mb-7 lg:mt-20 2xl:mt-20'>
+          <h1 className='text-2xl font-bold text-center capitalize md:text-5xl lg:text-5xl '>
             The Easiest Way to Get <br className='md:hidden' />
             Your New Job
           </h1>
@@ -32,7 +32,7 @@ export default function Home() {
             <Input
               placeholder='Job Title, Company name, or role'
               type='text'
-              className='p-2 text-black rounded-sm'
+              className='p-2 text-black rounded-sm '
               autoFocus='autoFocus'
               value={searchTerm}
               name='search-job'
@@ -41,13 +41,13 @@ export default function Home() {
             <Input
               placeholder='City, Province, or region'
               type='text'
-              className='w-full p-2 text-black rounded-sm'
+              className='hidden w-full p-2 text-black rounded-sm md:block lg:block 2xl:block'
               name='search-job'
               onChange={handleLocation}
             />
 
             <div className='flex flex-col w-full gap-3 md:flex-row'>
-              <Link href='/pages/jobs'>
+              <Link href='/pages/jobs' className='justify-center'>
                 <Button
                   type='submit'
                   className='w-auto p-2 text-black bg-white rounded-sm '

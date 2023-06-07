@@ -4,7 +4,7 @@ import PageLink from "../atoms/Link";
 import { TfiClose } from "react-icons/tfi";
 const Menu = ({ setShowMenu, showMenu }) => {
   return (
-    <div className='flex justify-start relative min-h-screen px-5 pr-3 bg-gray-600'>
+    <div className='flex justify-start relative min-h-screen px-5 pr-3 bg-gray-900'>
       <div className='flex flex-col flex-1 gap-1 mt-4 overflow-hidden font-semibold text-white'>
         {links.map((link) => (
           <PageLink key={link.id} href={link.href} text={link.text} setShowMenu={setShowMenu} />
