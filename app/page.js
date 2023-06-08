@@ -66,7 +66,7 @@ export default function Home() {
           <p className='my-6 text-center text-black capitalize md:text-2xl lg:text-2xl'>
             Latest Ad-free job board
           </p>
-          <div className='flex flex-col justify-center w-full gap-2 md:grid-cols-3 md:grid'>
+          {/* <div className='flex-col justify-center hidden w-full gap-2 md:grid-cols-3 md:grid'>
             <div className='flex-1 bg-red-500 '>
               <p>Home</p>
               <p>Home</p>
@@ -88,7 +88,10 @@ export default function Home() {
               <p>Home</p>
               <p>Home</p>
             </div>
-          </div>
+          </div> */}
+          <p className='my-6 text-center text-black capitalize md:text-2xl lg:text-2xl'>
+            Worry Less about Ads
+          </p>
         </div>
       </section>
     </main>
