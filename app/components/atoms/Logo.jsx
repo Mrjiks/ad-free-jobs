@@ -1,6 +1,5 @@
 import React from "react";
 import { BsBagFill } from "react-icons/bs";
-import logo from "../../../public/logo.png";
 const Logo = () => {
   return (
     <div className='flex flex-1 pl-2 align-middle'>
