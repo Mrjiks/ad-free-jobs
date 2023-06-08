@@ -34,7 +34,7 @@ const Jobs = () => {
   }
 
   return (
-    <div className='container flex w-full min-h-screen mx-auto mb-2 overflow-hidden md:justify-between md:px-8 lg:px-20'>
+    <div className='container flex flex-col w-full min-h-screen mx-auto mb-2 overflow-hidden md:justify-between md:px-8 lg:px-20'>
       <div>
         <SingleJob />
       </div>
@@ -64,16 +64,6 @@ const Jobs = () => {
                   <p className='font-semibold capitalize'>
                     Type:<span className='font-normal capitalize'>{tags[0]}</span>
                   </p>
-                  {/* <div className='hidden'>
-                    <p className='font-semibold capitalize'>Job Description:</p>
-                    {desc.map((tag, index) => {
-                      return (
-                        <p key={index} className='text-justify'>
-                          {tag.replace(" ", "  ").substring(0, 250)}
-                        </p>
-                      );
-                    })}
-                  </div> */}
                 </div>
                 <div className='flex items-center px-4 pt-4'>
                   <p className='capitalize'>
@@ -91,6 +81,11 @@ const Jobs = () => {
             </motion.div>
           );
         })}
+      </div>
+      <div className='flex justify-center'>
+        <Link href='https://www.arbeitnow.com/' className='p-2 bg-black border-blue-500 rounded-lg'>
+          See All Jobs
+        </Link>
       </div>
     </div>
   );
