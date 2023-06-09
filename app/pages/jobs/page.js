@@ -63,9 +63,7 @@ const Jobs = () => {
                   </p>
                   <p className='font-semibold capitalize'>
                     Type:
-                    {tags[0].length > 0 && (
-                      <span className='font-normal capitalize'>{tags[0]}</span>
-                    )}
+                    {tags.length > 0 && <span className='font-normal capitalize'>{tags[0]}</span>}
                   </p>
                 </div>
                 <div className='flex items-center px-4 pt-4'>
