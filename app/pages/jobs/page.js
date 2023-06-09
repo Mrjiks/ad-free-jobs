@@ -61,8 +61,8 @@ const Jobs = () => {
                     {" "}
                     Job Title: <span className='font-normal capitalize '>{title}</span>
                   </p>
-                  <p className='font-semibold capitalize'>
-                    Nature of Job:
+                  <p className='font-semibold'>
+                    {tags.length > 0 ? "Nature of Job :" : null}
                     {tags.length > 0 && (
                       <>
                         {tags.map((tag, index) => (
