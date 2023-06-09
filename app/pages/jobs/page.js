@@ -62,7 +62,10 @@ const Jobs = () => {
                     Job Title: <span className='font-normal capitalize '>{title}</span>
                   </p>
                   <p className='font-semibold capitalize'>
-                    Type:<span className='font-normal capitalize'>{tags[0]}</span>
+                    Type:
+                    {tags[0].length > 0 && (
+                      <span className='font-normal capitalize'>{tags[0]}</span>
+                    )}
                   </p>
                 </div>
                 <div className='flex items-center px-4 pt-4'>
