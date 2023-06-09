@@ -75,8 +75,8 @@ const Jobs = () => {
                   </p>
                 </div>
                 <div className='flex items-center px-4 pt-4'>
-                  <p className='capitalize'>
-                    Office Location: <span className='text-gray-900'>{location}</span>{" "}
+                  <p className='font-semibold text-gray-900 capitalize'>
+                    Office Location: <span className='font-normal capitalize '>{location}</span>{" "}
                   </p>
                 </div>
                 <div className='flex items-center px-4 py-4'>
