@@ -62,13 +62,21 @@ const Jobs = () => {
                     Job Title: <span className='font-normal capitalize '>{title}</span>
                   </p>
                   <p className='font-semibold capitalize'>
-                    Type:
-                    {tags.length > 0 && <span className='font-normal capitalize'>{tags[0]}</span>}
+                    Nature of Job:
+                    {tags.length > 0 && (
+                      <>
+                        {tags.map((tag, index) => (
+                          <p className='font-normal capitalize' key={index}>
+                            <li>{tag}</li>
+                          </p>
+                        ))}
+                      </>
+                    )}
                   </p>
                 </div>
                 <div className='flex items-center px-4 pt-4'>
                   <p className='capitalize'>
-                    Location: <span className='text-gray-900'>{location}</span>{" "}
+                    Office Location: <span className='text-gray-900'>{location}</span>{" "}
                   </p>
                 </div>
                 <div className='flex items-center px-4 py-4'>
