@@ -1,15 +1,15 @@
 const About = () => {
   return (
-    <div className='container flex flex-col min-h-screen px-5 mx-auto mb-2 justify-evenly md:px-8 lg:px-20'>
-      <div className='container gap-3 px-4 py-5 mx-auto text-justify text-gray-400 2xlg:w-3/4 '>
-        <h1 className='py-4 text-3xl'>
-          Welcome to <span className='w-10 text-2xl text-blue-500'>لϚմʍʍąɾվ</span>
+    <div className='container flex flex-col min-h-screen px-2 mx-auto mb-2 justify-evenly md:px-8 '>
+      <div className='container w-full gap-3 py-5 mx-auto text-justify text-gray-400 2xlg:w-3/4'>
+        <h1 className='py-4 pl-2 text-3xl'>
+          Welcome to <span className='w-10 text-2xl text-blue-500'>لoBs</span>
         </h1>
         <p className='p-2 text-lg'>
-          At <span className='w-10 text-2xl text-blue-500'>لϚմʍʍąɾվ</span>, our mission is to
-          connect talented individuals with exciting employment opportunities. We understand the
-          challenges job seekers face when searching for the perfect position, and that's why we've
-          created a platform dedicated to simplifying the job search process.
+          At <span className='w-10 text-2xl text-blue-500'>لoBs</span>, our mission is to connect
+          talented individuals with exciting employment opportunities. We understand the challenges
+          job seekers face when searching for the perfect position, and that's why we've created a
+          platform dedicated to simplifying the job search process.
         </p>
         <p className='p-2 text-lg'>
           Our Job Board is designed to be user-friendly and efficient, ensuring that you have access
@@ -24,10 +24,10 @@ const About = () => {
           free from distractions, allowing you to concentrate on finding your dream job.
         </p>
         <div className='flex flex-col justify-around gap-2'>
-          <h3>Here's what you can expect from our Job Board:</h3>
+          <h3 className='pl-2'>Here's what you can expect from our Job Board:</h3>
           <ul className='flex flex-col justify-around gap-2'>
             <li>
-              <h4 className='text-blue-500 '> Comprehensive Job Listings:</h4>{" "}
+              <h4 className='pl-2 text-blue-500'> Comprehensive Job Listings:</h4>{" "}
               <p className='p-2 text-lg'>
                 We collaborate with a diverse network of employers and companies to bring you a vast
                 selection of job opportunities. Our listings span across different industries, job
@@ -36,7 +36,7 @@ const About = () => {
               </p>
             </li>
             <li>
-              <h4 className='text-blue-500 '> User-Friendly Interface:</h4>
+              <h4 className='pl-2 text-blue-500 '> User-Friendly Interface:</h4>
               <p className='p-2 text-lg'>
                 Our platform is designed with simplicity in mind. You can easily navigate through
                 the website, search for specific positions, and filter results based on your
@@ -44,7 +44,7 @@ const About = () => {
               </p>
             </li>
             <li>
-              <h4 className='text-blue-500 '>Detailed Job Descriptions:</h4>{" "}
+              <h4 className='pl-2 text-blue-500'>Detailed Job Descriptions:</h4>{" "}
               <p className='p-2 text-lg'>
                 We provide detailed job descriptions for each position, offering valuable insights
                 into the responsibilities, requirements, and benefits. You'll have all the
@@ -54,7 +54,7 @@ const About = () => {
             </li>
             <li>
               {" "}
-              <h4 className='text-blue-500 '> Personalized Job Alerts: </h4>
+              <h4 className='pl-2 text-blue-500'> Personalized Job Alerts: </h4>
               <p className='p-2 text-lg'>
                 Stay up to date with the latest opportunities by setting up personalized job alerts.
                 Receive email notifications based on your preferred criteria, so you never miss out
@@ -62,7 +62,7 @@ const About = () => {
               </p>
             </li>
             <li>
-              <h4 className='text-blue-500 '> Easy Application Process:</h4>{" "}
+              <h4 className='pl-2 text-blue-500 '> Easy Application Process:</h4>{" "}
               <p className='p-2 text-lg'>
                 Applying for jobs through our Job Board is a breeze. With just a few clicks, you can
                 submit your application and showcase your qualifications directly to the hiring
@@ -72,11 +72,11 @@ const About = () => {
             </li>
           </ul>
           <p className='p-2 text-lg'>
-            At <span className='w-10 text-2xl text-blue-500'>لϚմʍʍąɾվ</span>, we believe that
-            finding a job should be an exciting and rewarding journey. With our Job Board, we aim to
-            empower job seekers like you with the tools and resources needed to explore the vast
-            world of employment opportunities. Start your job search with us today and discover the
-            next step in your career!
+            At <span className='w-10 text-2xl text-blue-500'>لoBs</span>, we believe that finding a
+            job should be an exciting and rewarding journey. With our Job Board, we aim to empower
+            job seekers like you with the tools and resources needed to explore the vast world of
+            employment opportunities. Start your job search with us today and discover the next step
+            in your career!
           </p>
         </div>
       </div>
