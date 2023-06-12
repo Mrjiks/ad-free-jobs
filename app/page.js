@@ -32,7 +32,7 @@ export default function Home() {
         <div className='flex justify-end align-middle'>
           <form className='flex flex-col justify-center w-full gap-3 px-4 md:w-3/4 md:flex-row'>
             <Input
-              placeholder='Activate search button by typing something...'
+              placeholder='Search with any keyword e,g job title, location, type etc'
               type='text'
               className='w-full p-2 text-black rounded-sm'
               autoFocus='autoFocus'
@@ -58,13 +58,13 @@ export default function Home() {
           </form>
         </div>
       </section>
-      <section className='flex flex-col justify-start flex-1 w-full p-2 bg-white'>
-        <div className='flex flex-col justify-center '>
+      <section className='flex flex-col justify-start flex-1 w-full p-3 bg-white'>
+        <div className='container flex flex-col justify-center w-3/4 mx-auto'>
           <h2 className='font-bold text-center text-black capitalize md:text-5xl lg:text-5xl'>
-            Popular Categories
+            Welcome to <span className='w-10 text-5xl text-blue-500'>لϚմʍʍąɾվ</span>
           </h2>
           <p className='my-6 text-center text-black capitalize md:text-2xl lg:text-2xl'>
-            Latest Ad-free job board
+            Your Gateway to Exciting Job Opportunities!
           </p>
           {/* <div className='flex-col justify-center hidden w-full gap-2 md:grid-cols-3 md:grid'>
             <div className='flex-1 bg-red-500 '>
@@ -89,8 +89,11 @@ export default function Home() {
               <p>Home</p>
             </div>
           </div> */}
-          <p className='my-6 text-center text-black capitalize md:text-2xl lg:text-2xl'>
-            Worry Less about Ads
+          <p className='my-6 text-center text-black md:text-2xl lg:text-2xl'>
+            Are you ready to take the next big step in your career? Look no further! Our job board
+            is here to connect you with a world of incredible employment possibilities. With a
+            user-friendly interface and a commitment to providing only the best job listings, we are
+            your trusted partner in finding the perfect job.
           </p>
         </div>
       </section>
