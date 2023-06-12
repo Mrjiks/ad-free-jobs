@@ -34,11 +34,12 @@ export default function Home() {
             <Input
               placeholder='Search with any keyword e,g job title, location, type etc'
               type='text'
-              className='w-full p-2 text-black rounded-sm'
+              className='w-full p-2 text-black rounded-sm '
               autoFocus='autoFocus'
               value={searchTerm}
               name='search-job'
               onChange={handleChange}
+              id='search'
             />
 
             <div className='flex flex-col w-full gap-3 md:flex-row'>
@@ -89,13 +90,14 @@ export default function Home() {
               <p>Home</p>
             </div>
           </div> */}
-          <p className='my-6 text-center text-black md:text-2xl lg:text-2xl'>
+          <p className='my-1 leading-6 text-justify text-black md:text-2xl lg:text-2xl'>
             Are you ready to take the next big step in your career? Look no further! Our job board
             is here to connect you with a world of incredible employment possibilities. With a
             user-friendly interface and a commitment to providing only the best job listings, we are
             your trusted partner in finding the perfect job.
           </p>
         </div>
+        {/* <Button text='Start Searching'></Button> */}
       </section>
     </main>
   );

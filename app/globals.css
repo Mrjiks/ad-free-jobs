@@ -22,4 +22,5 @@ body {
   color: #08c2f3;
   background: #0a3b49;
   font-family: Lato;
+  scroll-behavior: smooth;
 }
