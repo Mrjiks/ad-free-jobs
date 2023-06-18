@@ -41,12 +41,12 @@ export const links = [
     active: false,
   },
 
-  {
-    id: 2,
-    href: "/pages/dashboard",
-    text: " Dashboard",
-    active: false,
-  },
+  // {
+  //   id: 2,
+  //   href: "/pages/dashboard",
+  //   text: " Dashboard",
+  //   active: false,
+  // },
   {
     id: 3,
     href: "/pages/jobs",
@@ -59,12 +59,12 @@ export const links = [
     text: "About",
     active: false,
   },
-  {
-    id: 5,
-    href: "/pages/register",
-    text: "Register",
-    active: false,
-  },
+  // {
+  //   id: 5,
+  //   href: "/pages/register",
+  //   text: "Register",
+  //   active: false,
+  // },
 ];
 
 export const jobs = [

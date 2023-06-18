@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <div className='container flex flex-col min-h-screen px-2 mx-auto mb-2 justify-evenly md:px-8 '>
-      <div className='container w-full gap-3 py-5 mx-auto text-justify text-gray-400 2xlg:w-3/4'>
+      <div className='container w-full gap-3 py-5 mx-auto text-justify text-gray-400 2xlg:w-3/4 md:px-10 lg:px-20'>
         <h1 className='py-4 pl-2 text-3xl'>
           Welcome to <span className='w-10 text-2xl text-blue-500'>لoBs</span>
         </h1>

@@ -1,20 +1,32 @@
 "use client";
 import Input from "./components/atoms/Input";
 import Button from "./components/atoms/Button";
-import { useState } from "react";
 import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import getData from "@/app/lib/data/links";
 
 export default function Home() {
-  const [searchTerm, setSearchTerm] = useState();
-  const [location, setLocation] = useState();
+  const [searchTerm, setSearchTerm] = useState("Berlin");
+
   const handleChange = (e) => {
     e.preventDefault();
     setSearchTerm(() => e.target.value);
   };
-  const handleLocation = (e) => {
-    e.preventDefault();
-    setLocation(() => e.target.value);
+
+  const url = "https://www.arbeitnow.com/api/job-board-api?page=1";
+  const getJob = async () => {
+    const { data } = await getData(url);
+
+    const sortedData = data.sort((a, b) => b.created_at - a.created_at);
+
+    setSearchTerm(sortedData);
+    // console.log(sortedData.includes(searchTerm));
+    return sortedData;
   };
+
+  useEffect(() => {
+    getJob();
+  }, []);
 
   const isDisabled = !searchTerm;
   return (

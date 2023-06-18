@@ -18,10 +18,10 @@ const Jobs = () => {
   const getJob = async () => {
     const { data } = await getData(url);
 
-    const sortedData = data.sort((a, b) => b.created_at - a.created_at);
+    // const sortedData = data.sort((a, b) => b.created_at - a.created_at);
 
-    setJobList(sortedData);
-    return sortedData;
+    setJobList(data);
+    // return sortedData;
   };
 
   useEffect(() => {
@@ -45,14 +45,16 @@ const Jobs = () => {
         <div className='mx-auto bg-black'>
           <span
             onClick={() => handlePage(page - 1)}
-            className={page > 1 ? "cursor-pointer" : "opacity-0"}>
+            className={page >= 1 ? "cursor-pointer" : "opacity-0"}>
             ⬅️
           </span>
           {[...Array(jobList.length / 10)].map((_, i) => {
             return (
               <span
                 key={i}
-                className={page === i + 1 ? "p-1 text-white" : "p-2 lg:mx-2"}
+                className={
+                  page === i + 1 ? "p-1 text-white cursor-pointer" : "p-2 lg:mx-2 cursor-pointer"
+                }
                 onClick={() => handlePage(i + 1)}>
                 {i + 1}
               </span>
