@@ -20,7 +20,6 @@ export default function Home() {
     const sortedData = data.sort((a, b) => b.created_at - a.created_at);
 
     setSearchTerm(sortedData);
-    // console.log(sortedData.includes(searchTerm));
     return sortedData;
   };
 
@@ -73,10 +72,10 @@ export default function Home() {
       </section>
       <section className='flex flex-col justify-start flex-1 w-full p-3 bg-white'>
         <div className='container flex flex-col justify-center py-4 mx-auto lg:w-3/4'>
-          <h2 className='text-3xl font-bold text-center text-black capitalize md:text-5xl lg:text-5xl'>
-            Welcome to <span className='w-10 text-4xl text-teal-700'>لoBs</span>
+          <h2 className='text-3xl font-bold text-center text-black capitalize md:text-5xl lg:text-2xl'>
+            Welcome to <span className='w-10 text-3xl text-teal-700'>لoBs</span>
           </h2>
-          <p className='my-6 text-center text-black capitalize md:text-2xl lg:text-2xl'>
+          <p className='my-6 text-center text-black text-teal-700 capitalize md:text-2xl lg:text-2xl'>
             Your Gateway to Exciting Job Opportunities!
           </p>
           <p className='my-1 leading-6 text-justify text-black md:text-2xl lg:text-2xl'>
@@ -86,7 +85,6 @@ export default function Home() {
             your trusted partner in finding the perfect job.
           </p>
         </div>
-        {/* <Button text='Start Searching'></Button> */}
       </section>
     </main>
   );

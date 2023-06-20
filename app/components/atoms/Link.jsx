@@ -13,8 +13,8 @@ const PageLink = ({ href, setShowMenu, text, active }) => {
       }
       className={
         activeLink
-          ? "p-1 cursor-pointer hover:text-blue-500 hover:border-b-4"
-          : "p-1 cursor-pointer hover:text-blue-500 border-b-blue-500"
+          ? "p-1 cursor-pointer hover:text-white hover:border-b-4"
+          : "p-1 cursor-pointer hover:text-white border-b-blue-500"
       }>
       {text}
     </Link>

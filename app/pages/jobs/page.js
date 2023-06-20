@@ -62,7 +62,7 @@ const Jobs = () => {
           })}
           <span
             onClick={() => handlePage(page + 1)}
-            className={page < jobList.length / 10 ? "" : "opacity-0"}>
+            className={page < jobList.length / 10 ? "cursor-pointer" : "opacity-0"}>
             ➡️
           </span>
         </div>
@@ -108,13 +108,19 @@ const Jobs = () => {
                     Office Location: <span className='font-normal capitalize '>{location}</span>{" "}
                   </p>
                 </div>
-                <div className='flex items-center px-4 py-4 mx-auto'>
-                  <p className='p-2 bg-black border-blue-500 rounded-lg'>
+                <motion.div
+                  className='flex items-center px-4 py-4 mx-auto'
+                  initial={{ opacity: 1 }}
+                  whileHover={{
+                    scale: 1.05,
+                    transition: { duration: 0.8 },
+                  }}>
+                  <p className='p-2 bg-black border-blue-500 rounded-lg hover:text-white'>
                     <Link href={url}>
-                      View details and <span className='text-green-500'>Apply</span>
+                      View details and <span className='text-teal-600 hover:text-white'>Apply</span>
                     </Link>
                   </p>
-                </div>
+                </motion.div>
               </div>
             </motion.div>
           );
