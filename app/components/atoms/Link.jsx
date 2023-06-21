@@ -1,8 +1,17 @@
+"use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
 
-const PageLink = ({ href, setShowMenu, text, active }) => {
-  const [activeLink, setActive] = useState(active);
+const PageLink = ({ href, setShowMenu, text }) => {
+  // Show active link
+  const pathname = usePathname();
+  let isActive = false;
+
+  if (pathname === href) {
+    isActive = true;
+  }
   return (
     <Link
       href={href}
@@ -11,11 +20,10 @@ const PageLink = ({ href, setShowMenu, text, active }) => {
           !preState;
         })
       }
-      className={
-        activeLink
-          ? "p-1 cursor-pointer hover:text-white hover:border-b-4"
-          : "p-1 cursor-pointer hover:text-white border-b-blue-500"
-      }>
+      className={clsx(
+        "p-1 cursor-pointer  hover:text-white hover:border-b-4",
+        isActive && "bg-teal-900 text-white "
+      )}>
       {text}
     </Link>
   );

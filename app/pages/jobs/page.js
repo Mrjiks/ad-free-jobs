@@ -95,9 +95,9 @@ const Jobs = () => {
                     {tags.length > 0 && (
                       <>
                         {tags.map((tag, index) => (
-                          <p className='font-normal capitalize' key={index}>
+                          <span className='font-normal capitalize' key={index}>
                             <li>{tag}</li>
-                          </p>
+                          </span>
                         ))}
                       </>
                     )}
