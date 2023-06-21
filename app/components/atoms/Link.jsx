@@ -22,7 +22,7 @@ const PageLink = ({ href, setShowMenu, text }) => {
       }
       className={clsx(
         "p-1 cursor-pointer  hover:text-white hover:border-b-4",
-        isActive && "bg-teal-900 text-white "
+        isActive && "bg-teal-900 text-white rounded-sm border-1 "
       )}>
       {text}
     </Link>

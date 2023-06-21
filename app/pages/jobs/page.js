@@ -3,7 +3,7 @@ import getData from "@/app/lib/data/links";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-
+import { BsFillArrowRightCircleFill, BsFillArrowLeftCircleFill } from "react-icons/bs";
 const Jobs = () => {
   const url = "https://www.arbeitnow.com/api/job-board-api?page=1";
 
@@ -18,10 +18,8 @@ const Jobs = () => {
   const getJob = async () => {
     const { data } = await getData(url);
 
-    // const sortedData = data.sort((a, b) => b.created_at - a.created_at);
-
     setJobList(data);
-    // return sortedData;
+    return data;
   };
 
   useEffect(() => {
@@ -40,13 +38,13 @@ const Jobs = () => {
 
   return (
     <div className='container flex flex-col w-full min-h-screen mx-auto mb-2 overflow-hidden md:justify-between md:px-8 lg:px-20'>
-      <div className='flex flex-col items-center fixed inset-x-0 right-0 w-full mx-auto mb-10 bg-black h-[60px]'>
+      <div className='flex flex-col items-center fixed inset-x-0 right-0 w-full mx-auto mb-10 bg-black h-[80px]'>
         <p className='text-teal-900'> No of pages</p>
-        <div className='mx-auto bg-black'>
+        <div className='flex items-center mx-auto bg-black'>
           <span
             onClick={() => handlePage(page - 1)}
-            className={page >= 1 ? "cursor-pointer" : "opacity-0"}>
-            ⬅️
+            className={page > 1 ? "cursor-pointer" : "opacity-0"}>
+            <BsFillArrowLeftCircleFill className='text-teal-600 hover:text-white' />
           </span>
           {[...Array(jobList.length / 10)].map((_, i) => {
             return (
@@ -63,7 +61,7 @@ const Jobs = () => {
           <span
             onClick={() => handlePage(page + 1)}
             className={page < jobList.length / 10 ? "cursor-pointer" : "opacity-0"}>
-            ➡️
+            <BsFillArrowRightCircleFill className='text-teal-600 hover:text-white' />
           </span>
         </div>
       </div>
@@ -76,7 +74,6 @@ const Jobs = () => {
             <motion.div
               initial={{ opacity: 1 }}
               whileHover={{
-                // scale: 1.01,
                 transition: { duration: 0.8 },
               }}
               className='flex justify-center cursor-pointer md:mt-2 md:w-full'
@@ -127,7 +124,9 @@ const Jobs = () => {
         })}
       </div>
       <div className='flex justify-center'>
-        <Link href='https://www.arbeitnow.com/' className='p-2 bg-black border-blue-500 rounded-lg'>
+        <Link
+          href='https://www.arbeitnow.com/'
+          className='p-2 text-teal-600 bg-black border-blue-500 rounded-lg'>
           See All Jobs
         </Link>
       </div>
